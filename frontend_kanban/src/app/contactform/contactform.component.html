@@ -1,0 +1,28 @@
+<app-nav-bar></app-nav-bar>
+
+<section class="contact_us">
+   <h1 class="form_title">Contact us</h1>
+   <form class="contact-form row">
+     <div class="form-field col-lg-6">
+       <input id="name" #name class="input-text js-input" type="text" required>
+       <label class="labels" for="name">Name</label>
+     </div>
+     <div class="form-field col-lg-6">
+       <input id="surname" #surname class="input-text js-input" type="text" required>
+       <label class="labels" for="surname">Surname</label>
+     </div>
+     <div class="form-field col-lg-6 ">
+       <input id="email" #email class="input-text js-input" type="email" required>
+       <label class="labels" for="email">E-mail</label>
+     </div>
+     <div class="form-field col-lg-12">
+       <input id="message" #message class="input-text js-input" type="text" required>
+       <label class="labels" for="message">Message</label>
+     </div>
+     <div class="form-field col-lg-12">
+       <input class="submit-btn" type="submit" value="Submit" (click)="myalert(name.value, surname.value, email.value, message.value)">
+     </div>
+   </form>
+</section>
+
+<app-footer></app-footer>

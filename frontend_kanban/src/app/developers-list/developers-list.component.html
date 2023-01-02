@@ -1,0 +1,26 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="flex flex-col container max-w-md mt-10 mx-auto w-full items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow">
+    <ul class="flex flex-col divide-y w-full">
+       <li *ngFor="let currentDeveloper of developersList" class="">
+        <section class="accordion select-none cursor-pointer hover:bg-gray-50 flex flex-1 items-center p-4 display:none" [routerLink]="['/developer',currentDeveloper.id]">
+          <button class="w-10 text-right " name="collapse" id="handle{{currentDeveloper.id}}" checked="checked">
+            <svg width="20" fill="currentColor" height="20" class="hover:text-gray-800 dark:hover:text-white dark:text-gray-200 text-gray-500" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path>
+            </svg>
+          </button>
+           <div class="flex flex-col w-10 h-10 justify-center items-center mr-4" href="/developer/{currentDeveloper.id}">
+             <a class="block relative">
+               <img alt="profil" src="https://img2.freepng.fr/20180401/dbq/kisspng-user-profile-computer-icons-profile-5ac09245049c32.0935523415225697970189.jpg" class="mx-auto object-cover rounded-full h-10 w-10" />
+             </a>
+           </div>
+           
+            <h2 class="handle">
+              <label for="handle{{currentDeveloper.id}}">{{currentDeveloper.firstname}} {{currentDeveloper.lastname}}</label>
+            </h2>
+        </section>    
+       </li>
+    </ul>
+  </div>
+  
+<app-footer></app-footer>

@@ -1,0 +1,13 @@
+.container {
+    padding: 10px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+
+  h1 {
+    margin: 0 0 1.5em;
+    font-weight: 600;
+    font-size: 1.5em;
+  }

@@ -1,0 +1,16 @@
+<body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+  <div>
+    <app-nav-bar></app-nav-bar>
+    <div class="kanban-board">
+      <div class="kanban-column" *ngFor="let column of columns">
+        <h2>{{ column.title }}</h2>
+        <div class="kanban-card" *ngFor="let card of column.cards">
+          <h3>{{ card.title }}</h3>
+          <p>Created : {{ card.created }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<app-footer></app-footer>
+</body>
+

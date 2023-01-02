@@ -1,0 +1,107 @@
+/*
+ CSS for the main interaction
+*/
+.accordion > input[name="collapse"] {
+    display: none;
+  }
+  
+  .accordion label,
+  .accordion .content{
+    margin: 0 auto;
+   }
+  
+  
+  .accordion .content {
+    background: #fff;
+    overflow: hidden;
+    height: 0;
+    transition: 0.5s;
+  }
+  
+  .accordion > input[name="collapse"]:checked ~ .content {
+    transition: height 0.5s;
+  }
+  
+  .accordion label {
+    display: block;
+   
+  }
+  
+  
+  /* For Desktop */
+  @media only screen {
+    .accordion > input[name="collapse"]:checked ~ .content {
+      height: 40px;
+    }
+  }
+  
+  
+  .accordion > input[name="collapse"]:checked ~ .content {
+    border-top: 0;
+    transition: 0.3s;
+  }
+  
+  .accordion .handle {
+    margin: 0;
+    font-size: 16px;
+    
+  }
+  
+  .accordion label {
+    cursor: pointer;
+    font-weight: normal;
+    padding: 10px;
+    user-select: none;
+    
+  }
+  
+  .accordion label:hover,
+  .accordion label:focus {
+  }
+  
+  .accordion .handle label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1em;
+    line-height: 1.556em;
+    vertical-align: middle;
+    transition: 0.4s;
+    
+  }
+
+  input {
+    hidden: true;
+  }
+  
+  body {
+    padding: 10px;
+  }
+
+  
+  p {
+    margin: 0 0 1em;
+    padding: 10px;
+  }
+  
+  h1 {
+    margin: 0 0 1.5em;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+  
+  .accordion p:last-child {
+    margin-bottom: 0;
+  }
+  .container{
+      margin: 0 auto;
+      max-width: 620px;
+  }
+
+  div {
+    background: #fff;
+  }
+
+  button {
+    color: #000000;
+  }
